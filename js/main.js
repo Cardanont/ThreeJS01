@@ -19,6 +19,8 @@ window.addEventListener('resize', () => {
 var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 
+// var gemoetry2 = new THREE.SpehereGeometry(1,20,20);
+
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 });
 // var mesh = new THREE.Mesh(geometry, material);
