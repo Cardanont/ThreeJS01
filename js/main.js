@@ -27,6 +27,13 @@ var material = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 });
 
 // scene.add(mesh);
 
+
+var geometry2 = new THREE.SphereGeometry( 1, 10, 10 );
+var material2 = new THREE.MeshBasicMaterial( {color: 0xF7F7F7} );
+var sphere = new THREE.Mesh( geometry2, material2 );
+scene.add( sphere );
+
+
 meshX = -10;
 
 for(var i = 0; i < 15; i++){
