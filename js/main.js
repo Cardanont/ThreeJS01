@@ -3,7 +3,7 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 camera.position.z = 5;
 
 var renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setClearColor("#e5e5e5");
+renderer.setClearColor("#8CC6FF");
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
@@ -20,14 +20,17 @@ var raycaster = new THREE.Raycaster();
 var mouse = new THREE.Vector2();
 
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 });
+//var material = new THREE.MeshLambertMaterial({ color: 0xF7F7F7 });
+const texture = new THREE.TextureLoader().load('textures/crate.gif');
+const material = new THREE.MeshBasicMaterial({ map: texture });
 // var mesh = new THREE.Mesh(geometry, material);
 
 // scene.add(mesh);
 
 
-var geometry2 = new THREE.SphereGeometry( 1, 10, 10 );
-var material2 = new THREE.MeshBasicMaterial( {color: 0xF7F7F7} );
+var geometry2 = new THREE.SphereGeometry( 1, 20, 20 );
+const texture2 = new THREE.TextureLoader().load('textures/disturb.jpg');
+const material2 = new THREE.MeshBasicMaterial({ map: texture2 });
 var sphere = new THREE.Mesh( geometry2, material2 );
 scene.add( sphere );
 
