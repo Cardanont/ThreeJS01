@@ -29,7 +29,7 @@ const material = new THREE.MeshBasicMaterial({ map: texture });
 
 
 var geometry2 = new THREE.SphereGeometry( 1, 20, 20 );
-const texture2 = new THREE.TextureLoader().load('textures/disturb.jpg');
+const texture2 = new THREE.TextureLoader().load('textures/brick_bump.jpg');
 const material2 = new THREE.MeshBasicMaterial({ map: texture2 });
 var sphere = new THREE.Mesh( geometry2, material2 );
 scene.add( sphere );
