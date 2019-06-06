@@ -3,7 +3,7 @@ var geometry, material, mesh;
 
 scene = new THREE.Scene();
 
-geometry = new THREE.IcosahedronGeometry(200, 1); 
+geometry = new THREE.SphereGeometry( 1, 20, 20 );
 material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true, wireframeLinewidth: 2 });
 mesh = new THREE.Mesh(geometry, material);
 
