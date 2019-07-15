@@ -22,8 +22,6 @@ function init() {
     camera.position.z = 5;
 }
 
-
-
 function animate(){
     requestAnimationFrame(animate);
 

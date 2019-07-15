@@ -28,16 +28,16 @@ const material = new THREE.MeshBasicMaterial({ map: texture });
 // scene.add(mesh);
 
 
-var geometry2 = new THREE.SphereGeometry( 1, 20, 20 );
+var geometry2 = new THREE.SphereGeometry(1, 20, 20);
 const texture2 = new THREE.TextureLoader().load('textures/brick_bump.jpg');
 const material2 = new THREE.MeshBasicMaterial({ map: texture2 });
-var sphere = new THREE.Mesh( geometry2, material2 );
-scene.add( sphere );
+var sphere = new THREE.Mesh(geometry2, material2);
+scene.add(sphere);
 
 
 meshX = -10;
 
-for(var i = 0; i < 15; i++){
+for (var i = 0; i < 15; i++) {
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.x = (Math.random() - 0.5) * 10;
     mesh.position.y = (Math.random() - 0.5) * 10;
@@ -60,16 +60,16 @@ var render = function () {
     renderer.render(scene, camera);
 }
 
-function onMouseMove(event){
+function onMouseMove(event) {
     event.preventDefault();
 
-    mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-    mouse.y = ( event.clientY / window.innerHeight ) * 2 - 1;
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
 
     raycaster.setFromCamera(mouse, camera);
 
     var intersects = raycaster.intersectObjects(scene.children, true);
-    for(var i = 0; i < intersects.length; i ++){
+    for (var i = 0; i < intersects.length; i++) {
         this.tl = new TimelineMax();
         this.tl.to(intersects[i].object.scale, 1, { x: 2, ease: Expo.easeOut })
         this.tl.to(intersects[i].object.scale, .5, { x: .5, ease: Expo.easeOut })
